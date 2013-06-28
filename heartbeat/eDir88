@@ -249,7 +249,7 @@ eDir_status() {
     for IFACE in ${IFACE2[@]}
     do
         ocf_log debug "Checking ndsd instance for $IFACE"
-	NDSD_SOCKS=$(netstat -ntlp | grep -ce "$IFACE.*ndsd")
+        NDSD_SOCKS=$(netstat -ntlp | grep -ce "$IFACE.*ndsd")
 
 	if [ "$NDSD_SOCKS" -eq 1 ] ; then
 	   let counter=counter-1
